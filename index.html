@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Greeting Card</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="loader">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+
+    <header class="hero-section">
+      <h1>Happy Birthday, My Special One! 🎉</h1>
+      <p class="subtext">Click the balloon to begin your special surprise</p>
+      <div class="interactive-balloon">
+        <img src="images/love-balloon.png" alt="Click" id="loveBalloon" />
+      </div>
+    </header>
+
+    <main>
+      <section class="greeting-section hidden">
+        <h2>
+          I Wish You Happy Birthday, My Dearest Killer, My Killer Queen, My
+          Cham! 🎂
+        </h2>
+        <p>
+          🌟 You are always in my thoughts and forever in my heart. 🌟 I
+          celebrate you today and every day for the incredible person you are.
+          🎉 May your day be filled with all the love, joy, and happiness you
+          bring into my life. 💖 Here’s to more laughter, beautiful moments, and
+          unforgettable memories together, no matter the distance. 🌍✨
+        </p>
+        <p>🎂 Wishing you a birthday as amazing as you are, my Cham! 🌟 🎂</p>
+        <p>
+          You are the only person who is special to me outside of my family. So
+          please take care, dear. 🫂 And most importantly, keep smiling, Cham.
+          😊💫
+        </p>
+      </section>
+
+      <section class="countdown-section hidden">
+        <div id="countdown">3</div>
+        <div id="message" class="hidden">Happy Birthday! 🎉</div>
+      </section>
+
+      <section class="apology-section hidden">
+        <h2>From the Bottom of My Heart, I’m Very Sorry 😔</h2>
+        <p>Oye...! 😊</p>
+        <p>
+          How are you? And how's your health? I found it too hard not to convey
+          my wishes to you on your special day. I hope my wishes don't make you
+          feel sad—that's the last thing I want.
+        </p>
+        <p>
+          If I couldn't text you now, I might never get the chance again. So,
+          take care, dear! ❤ As I’ve always said, I will never leave you alone;
+          you will always be a part of my life. I don’t want to go against your
+          words anymore because those are like the Gita to me. 🙏
+        </p>
+        <p>
+          I’m sorry if I crossed any boundaries or made you feel bad or sad,
+          especially after everything you said. I hope there is nothing wrong
+          with how I treated you, as I've always seen you as mine. So, walk with
+          pride. I wish you a fruitful and happy life ahead. 🌟
+        </p>
+        <p>
+          Please keep smiling. 😊 Thank you for coming into my life. I promise
+          that no one will feel hurt by me from now on. 🌈
+        </p>
+        <p>
+          Note: This is not to impress anyone; it’s simply the only way I know
+          to convey my wishes to my Killer.
+        </p>
+        <div class="visual-element"></div>
+      </section>
+
+      <section class="memories-section hidden">
+        <h2>Remember when…? 😊</h2>
+        <p>These are the best memories:</p>
+        <div class="slideshow memory-images">
+          <img src="images/memory1.jpg" alt="Memory 1" />
+          <img src="images/memory2.jpg" alt="Memory 2" />
+          <img src="images/memory3.jpg" alt="Memory 3" />
+        </div>
+      </section>
+
+      <section class="future-section hidden">
+        <h2>A New Beginning… 🌅</h2>
+        <p>
+          Let's look forward to a brighter future filled with love,
+          understanding, and joy. I promise to always be there for you, just as
+          you have been for me. 💖
+        </p>
+      </section>
+
+      <div class="scrolling-balloons hidden">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+      </div>
+
+      <div class="music-option">
+        <button class="music-control" onclick="toggleMusic()">
+          🎵 Play Music
+        </button>
+      </div>
+    </main>
+
+    <footer>
+      <p>With all my love, 💕</p>
+      <button class="contact-button" onclick="leaveReply()">
+        Leave a Reply
+      </button>
+    </footer>
+
+    <div id="balloon-container"></div>
+
+    <div class="cracker-container hidden">
+      <div id="cracker1" class="cracker"></div>
+      <div id="cracker2" class="cracker"></div>
+      <div id="cracker3" class="cracker"></div>
+    </div>
+
+    <audio id="background-music" src="music.mp3" preload="auto" loop></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
