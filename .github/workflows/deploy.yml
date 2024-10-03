@@ -3,25 +3,31 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages  # Change to the branch you want to deploy from
-
-permissions:
-  id-token: write
-  contents: write
+      - master # or main, depending on your default branch
+  pull_request:
+    branches:
+      - master # or main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build
-        run: echo "No build step required for static site"
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # You can specify the Node.js version you prefer.
 
-      - name: Deploy
+      - name: Install dependencies
+        run: npm install # Optional if you have no dependencies.
+
+      - name: Build project
+        run: echo "No build step necessary for static files"
+
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Adjust if your build output is in a specific folder
+          publish_dir: ./ # Path to your static files (the root folder in this case)
